@@ -10,11 +10,10 @@ const TransactionForm = () => {
         e.preventDefault();
         addTransaction({
             id: window.crypto.randomUUID(),
-            description: description,
-            amount: amount
+            description,
+            amount: +amount
 
         });
-        console.log(description, amount);
     } 
 
     return (
