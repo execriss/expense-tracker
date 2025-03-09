@@ -4,7 +4,7 @@ const Balance = () => {
   const { transactions } = useGLobalState();
 
   const amounts = transactions.map((transaction) => transaction.amount);
-  const total = amounts.reduce((acc, item) => (acc += item), 0);
+  const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(0);
 
   return (
     <div className="flex justify-between">
