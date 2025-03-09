@@ -7,7 +7,6 @@ const Balance = () => {
     return (
         <div>
             <h1>Balance</h1>
-            <h5>{JSON.stringify(data)}</h5>
         </div>
     )
 }
