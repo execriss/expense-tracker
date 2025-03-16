@@ -1,6 +1,86 @@
 @import "tailwindcss";
 
+* {
+  /* margin: 0; */
+  /* padding: 0; */
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
 body {
-  background-color: #202020;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #121212;
   color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+/* Estilos para scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #3f3f46;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4f46e5;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 640px) {
+  input,
+  button {
+    font-size: 16px; /* Evita el zoom en iOS */
+  }
+}
+
+/* Animaciones y transiciones */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Mejoras para inputs en móviles */
+input[type="number"],
+input[type="text"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Evitar que los números tengan flechas en Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Evitar que los números tengan flechas en Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Mejoras para botones táctiles */
+button,
+a {
+  touch-action: manipulation;
+}
+
+/* Sombras sutiles para profundidad */
+.shadow-subtle {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
